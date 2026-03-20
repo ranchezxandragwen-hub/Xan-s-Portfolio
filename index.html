@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Player 1 | Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<section class="home active" id="home">
+    <p class="insert-coin">★ INSERT COIN ★</p>
+    <h1>PLAYER 1</h1>
+    <p class="subtitle">IT Student | UI/UX | Developer</p>
+    <button onclick="showSection('menu')" class="start-btn">▶ START GAME</button>
+</section>
+
+<section class="menu section" id="menu">
+    <button class="back-btn" onclick="showSection('home')">← BACK</button>
+
+    <h2>MAIN MENU</h2>
+    <ul>
+        <li><button onclick="showSection('profile')">PROFILE</button></li>
+        <li><button onclick="showSection('levels')">PROJECTS</button></li>
+        <li><button onclick="showSection('skills')">SKILLS</button></li>
+        <li><button onclick="showSection('contact')">CONTACT</button></li>
+    </ul>
+</section>
+
+<section class="section" id="profile">
+    <button class="back-btn" onclick="showSection('menu')">← BACK TO MENU</button>
+
+    <h2>CHARACTER PROFILE</h2>
+    <img src="imgs/meee.png" class="avatar-img">
+
+    <p>Name: Xandra Ranchez</p>
+    <p>Class: IT Student</p>
+    <p>Specialization: UI/UX & Front-End</p>
+</section>
+
+<section class="section" id="levels">
+    <button class="back-btn" onclick="showSection('menu')">← BACK TO MENU</button>
+
+    <h2>SELECT LEVEL</h2>
+
+    <div class="level-grid">
+        <div class="level" onclick="openModal('level1')">
+            <h3>LEVEL 1</h3>
+            <img src="imgs/front.png" alt="Project 1">
+            <img src="imgs/back.png" alt="Project 1">
+        </div>
+
+        <div class="level" onclick="openModal('level2')">
+            <h3>LEVEL 2</h3>
+            <img src="imgs/1.png" alt="Project 2">
+            <img src="imgs/2.png" alt="Project 2">
+        </div>
+
+        <div class="level" onclick="openModal('level3')">
+            <h3>LEVEL 3</h3>
+            <img src="imgs/3.png" alt="Project 3">
+            <img src="imgs/4.png" alt="Project 3">
+        </div>
+
+        <div class="level boss">
+            <h3>BOSS LEVEL 🔒</h3>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="skills">
+    <button class="back-btn" onclick="showSection('menu')">← BACK TO MENU</button>
+
+    <h2>POWER UPS</h2>
+
+    <div class="skill">
+        <span>UI/UX</span>
+        <div class="bar"><div class="fill" style="width:85%"></div></div>
+    </div>
+
+    <div class="skill">
+        <span>HTML</span>
+        <div class="bar"><div class="fill" style="width:90%"></div></div>
+    </div>
+
+    <div class="skill">
+        <span>CSS</span>
+        <div class="bar"><div class="fill" style="width:80%"></div></div>
+    </div>
+</section>
+
+<section class="section" id="contact">
+    <button class="back-btn" onclick="showSection('menu')">← BACK TO MENU</button>
+
+    <h2>CONTACT</h2>
+    <p>Email: 
+        <a href="mailto:xgranchez@outlook.com">xgranchez@outlook.com</a>
+    </p>
+    <p>
+        <a href="https://github.com/ranchezxandragwen-hub" target="_blank">GitHub</a> | 
+        <a href="https://linkedin.com/in/xgranchez" target="_blank">LinkedIn</a>
+    </p>
+</section>
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">×</span>
+        <h2 id="modal-title"></h2>
+        <div class="gallery" id="modal-gallery"></div>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
